@@ -7,6 +7,6 @@ RUN apk update &&\
     wget "https://ci.netbeacon.de/repository/download/Xenia_Build/latest.lastSuccessful/EvalHelper.jar?guest=1" -O "EvalHelper.jar" &&\
     chmod +x Xenia.jar &&\
     chmod +x Xenia.jar &&\
-    mkdir -p /xenia/{config, data, logs}
+    mkdir -p /xenia/{config, data, logs} eval
 
 ENTRYPOINT cd /XENIAINSTALL && java -jar Xenia.jar $ARGS
