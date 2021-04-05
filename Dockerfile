@@ -2,8 +2,8 @@ FROM adoptopenjdk/openjdk15:alpine
 RUN apk update &&\ 
     apk upgrade &&\
     mkdir /XENIAINSTALL
-COPY ./artifacts/Xenia-all.jar /XENIAINSTALL/Xenia.jar
-COPY ./artifacts/EvalHelper.jar /XENIAINSTALL/EvalHelper.jar
+COPY Xenia-all.jar /XENIAINSTALL/Xenia.jar
+COPY EvalHelper.jar /XENIAINSTALL/EvalHelper.jar
 RUN cd /XENIAINSTALL &&\
     chmod +x Xenia.jar &&\
     chmod +x EvalHelper.jar &&\
